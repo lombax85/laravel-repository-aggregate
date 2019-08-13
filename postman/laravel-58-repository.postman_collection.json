@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "20fe8b46-22e3-4841-a951-a1f7908ca3cb",
+		"name": "laravel-58-repository",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addEvent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "XDEBUG_SESSION_START=19024",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "XDEBUG_SESSION=19024; expires=Tue, 13-Aug-2019 21:42:01 GMT; Max-Age=3600; path=/",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"evento test 2\",\n    \"date\": \"2019-01-02 00:00:00\",\n    \"users\": [\"Fabio\", \"Roby\", \"Grace\"]\n}"
+				},
+				"url": {
+					"raw": "https://laravel-58-repository.localhost/api/addEvent",
+					"protocol": "https",
+					"host": [
+						"laravel-58-repository",
+						"localhost"
+					],
+					"path": [
+						"api",
+						"addEvent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showEvents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://laravel-58-repository.localhost/api/showEvents",
+					"protocol": "https",
+					"host": [
+						"laravel-58-repository",
+						"localhost"
+					],
+					"path": [
+						"api",
+						"showEvents"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
