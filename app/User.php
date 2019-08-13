@@ -2,38 +2,48 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-
-class User extends Authenticatable
+class User
 {
-    use Notifiable;
+    private $id;
+    private $name;
+
+    private function __construct()
+    {
+    }
+
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public static function fromName(string $name): User
+    {
+        $user = new self;
+        $user->id = uniqid("", true);
+        $user->name = $name;
+
+        return $user;
+    }
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
+     * @param mixed $id
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
 
     /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
+     * @param mixed $name
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 }
