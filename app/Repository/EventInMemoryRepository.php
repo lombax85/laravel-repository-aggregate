@@ -33,7 +33,7 @@ class EventInMemoryRepository implements EventRepository
 
     public function all(): array
     {
-        return $this->items;
+        return array_values($this->items);
     }
 
     public function update(Event $event): void
