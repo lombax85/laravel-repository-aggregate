@@ -1,6 +1,13 @@
 ### Di cosa si tratta
 
-Esempio api di creazione eventi (evento con data e max 3 partecipanti).  
+Esercizio di stile per testare e allenarmi su diversi design pattern, metodologie e strumenti:  
+
+- Repository Pattern
+- Aggregati
+- Commands and Handlers
+- Symfony Serializer
+
+Realizzazione di un'api di creazione eventi (evento con data e max 3 partecipanti).  
 
 L’aggiunta dell’evento viene fatta tramite POST del seguente JSON a un endpoint
 
