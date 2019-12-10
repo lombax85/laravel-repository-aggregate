@@ -43,6 +43,6 @@ class EventController extends Controller
     public function showEvents()
     {
         $json = $this->serializer->serialize($this->eventRepository->all(), 'json');
-        return json_decode($json);
+        return json_decode($json)
     }
 }
